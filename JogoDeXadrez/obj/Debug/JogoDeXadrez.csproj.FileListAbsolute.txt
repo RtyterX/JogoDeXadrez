@@ -1,0 +1,7 @@
+C:\Users\Ricardo\Documents\JogoDeXadrez\JogoDeXadrez\obj\Debug\JogoDeXadrez.csproj.AssemblyReference.cache
+C:\Users\Ricardo\Documents\JogoDeXadrez\JogoDeXadrez\obj\Debug\JogoDeXadrez.csproj.CoreCompileInputs.cache
+C:\Users\Ricardo\Documents\JogoDeXadrez\JogoDeXadrez\bin\Debug\JogoDeXadrez.exe.config
+C:\Users\Ricardo\Documents\JogoDeXadrez\JogoDeXadrez\bin\Debug\JogoDeXadrez.exe
+C:\Users\Ricardo\Documents\JogoDeXadrez\JogoDeXadrez\bin\Debug\JogoDeXadrez.pdb
+C:\Users\Ricardo\Documents\JogoDeXadrez\JogoDeXadrez\obj\Debug\JogoDeXadrez.exe
+C:\Users\Ricardo\Documents\JogoDeXadrez\JogoDeXadrez\obj\Debug\JogoDeXadrez.pdb
