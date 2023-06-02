@@ -6,6 +6,12 @@
 *.user
 *.sln.docstates
 
+Properties
+.vs
+App.config
+bin
+obj
+
 # Build results
 
 [Dd]ebug/
@@ -132,6 +138,3 @@ $RECYCLE.BIN/
 
 _NCrunch*
 
-Properties
-
-App.config
