@@ -47,6 +47,7 @@
     <Compile Include="pecas\Cavalo.cs" />
     <Compile Include="pecas\Dama.cs" />
     <Compile Include="pecas\Peao.cs" />
+    <Compile Include="pecas\PosicaoXadrez.cs" />
     <Compile Include="pecas\Rei.cs" />
     <Compile Include="pecas\Torre.cs" />
     <Compile Include="Program.cs" />
