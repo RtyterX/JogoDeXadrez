@@ -16,24 +16,47 @@ namespace JogoDeXadrez
                 // Imprime as Colunas  
                 for (int c = 0; c < tab.colunas; c++)
                 {
-                    //Se a Peca for nula, Tracos para espaços vazios
-                    if (tab.peca(l, c) == null)
-                    {
-                        Console.Write("- ");
-                    }
-                    else // Caso contrario Imprime a Peça
-                    {
-                        imprimirPeca(tab.peca(l,c));
-                        Console.Write(" ");
-                    }
+                    imprimirPeca(tab.peca(l, c));
                 }
+
                 // Sem o WriteLine fica tudo numa linha só, ele que cria as colunas
                 Console.WriteLine();
             }
 
             Console.WriteLine("  a b c d e f g h");
         }
-        
+
+           //Sobrecarga que mostra as posições possiveis
+        public static void imprimirTabuleiro(Tabuleiro tab, bool[,] posicoesPossiveis)
+        {
+            ConsoleColor fundoOriginal = Console.BackgroundColor;
+            ConsoleColor fundoAlterado = ConsoleColor.DarkBlue;
+
+            for (int l = 0; l < tab.linhas; l++)
+            {
+                Console.Write(8 - l + " "); 
+                for (int c = 0; c < tab.colunas; c++)
+                {
+                    if (posicoesPossiveis[l, c])
+                    {
+                        Console.BackgroundColor = fundoAlterado;
+                    }
+                    else
+                    {
+                        Console.BackgroundColor = fundoOriginal;
+                    }
+
+                    imprimirPeca(tab.peca(l, c));
+                    Console.BackgroundColor = fundoOriginal;
+                }
+
+                Console.WriteLine();
+            }
+
+            Console.WriteLine("  a b c d e f g h");
+            Console.BackgroundColor = fundoOriginal;
+        }
+
         public static PosicaoXadrez lerPosicaoXadrez()
         {
             string s = Console.ReadLine();
@@ -44,17 +67,30 @@ namespace JogoDeXadrez
 
         public static void imprimirPeca(Peca peca)
         {
-            if (peca.cor == Cor.Branco)
+            //Se a Peca for nula, Imprima tracos no Lugar
+            if (peca == null)
             {
-                Console.Write(peca);
+                Console.Write("- ");
             }
-            else
-            {
-                ConsoleColor aux = Console.ForegroundColor;
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.Write(peca);
-                Console.ForegroundColor = aux;
+
+            else 
+            { 
+                if (peca.cor == Cor.Branco)
+                {
+                    Console.Write(peca);
+                }
+
+                else
+                {
+                    ConsoleColor aux = Console.ForegroundColor;
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.Write(peca);
+                    Console.ForegroundColor = aux;
+                }
+
+                Console.Write(" ");
             }
+
 
         }
 
