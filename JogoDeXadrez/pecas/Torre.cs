@@ -25,7 +25,7 @@ namespace pecas
 
             Posicao pos = new Posicao(0, 0);
 
-            // acima
+            //Acima
             pos.definirValores(posicao.linha - 1, posicao.coluna);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
@@ -37,7 +37,7 @@ namespace pecas
                 pos.linha = pos.linha - 1;
             }
 
-            // abaixo
+            //Abaixo
             pos.definirValores(posicao.linha + 1, posicao.coluna);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
@@ -49,7 +49,7 @@ namespace pecas
                 pos.linha = pos.linha + 1;
             }
 
-            // direita
+            //Direita
             pos.definirValores(posicao.linha, posicao.coluna + 1);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
@@ -61,7 +61,7 @@ namespace pecas
                 pos.coluna = pos.coluna + 1;
             }
 
-            // esquerda
+            //Esquerda
             pos.definirValores(posicao.linha, posicao.coluna - 1);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {

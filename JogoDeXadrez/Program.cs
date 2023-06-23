@@ -14,15 +14,11 @@ namespace JogoDeXadrez
 
                 while (!partida.terminada)
                 {
-                    Console.Clear();
-                    Tela.imprimirTabuleiro(partida.tab);
 
                     try
                     {
-                        Console.WriteLine();
-                        Console.WriteLine("Turno - " + partida.turno);
-                        Console.WriteLine("Aguardando Jogada... ");
-                        Console.WriteLine("Jogador: " + partida.jogadorAtual);
+                        Console.Clear();
+                        Tela.imprimirPartida(partida);
 
                         Console.WriteLine();
                         Console.Write("Origem: ");
@@ -49,6 +45,9 @@ namespace JogoDeXadrez
                     }
 
                 }
+
+                Console.Clear();
+                Tela.imprimirPartida(partida);
             }
 
             catch (TabuleiroException e)
